@@ -50,7 +50,7 @@ resource "aws_ebs_volume" "minecraft" {
  * ec2 instance for minecraft server, using Amazon Linux 2 AMI
  */
 resource "aws_instance" "minecraft-server" {
-    ami           = "ami-06560e4f1897491ed"
+    ami           = "ami-06560e4f1897491ed" // if you are using other region, you should change this
     instance_type = "t3a.medium" // 2 vCPU, 4 GiB
     key_name      = "minecraft"
     subnet_id     = aws_subnet.public-1.id
